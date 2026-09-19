@@ -41,14 +41,4 @@ Aplikasi cuaca berbasis web sederhana yang dibangun menggunakan Vanilla JavaScri
 ├── style.css    # Pengaturan gaya dan tata letak
 ├── script.js    # Logika program dan integrasi API
 └── README.md    # Dokumentasi proyek
-```
-
-## 👨‍💻 Profil Mahasiswa
-
-- **Nama:** [Masukkan Nama Lengkapmu]
-- **NIM/NPM:** [Masukkan Nomor Induk Mahasiswa]
-- **Mata Kuliah:** [Masukkan Nama Mata Kuliah]
-- **Dosen Pengampu:** [Masukkan Nama Dosen]
-
 ---
-*Dibuat untuk tujuan edukasi dan penyelesaian tugas perkuliahan.*
