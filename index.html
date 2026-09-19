@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Cuaca</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Masukkan nama kota">
+            <button id="searchBtn">Cari</button>
+        </div>
+
+        <div id="loading" class="hidden">sedang cari....</div>
+        <div id="weatherResult"></div>
+        <div id="errorMessage" class="error hidden"></div> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
