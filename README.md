@@ -1,4 +1,4 @@
-# Aplikasi Cuaca (Weather App) 🌦️
+# Weather App Tugas 5 🌦️
 
 Aplikasi cuaca berbasis web sederhana yang dibangun menggunakan Vanilla JavaScript (ES6+). Proyek ini dibuat untuk keperluan tugas perkuliahan sekaligus sebagai media pembelajaran fundamental JavaScript, khususnya dalam mengelola *Asynchronous Programming* (Fetch API) dan *Error Handling*.
 
