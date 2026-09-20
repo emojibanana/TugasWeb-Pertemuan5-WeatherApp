@@ -22,7 +22,6 @@ Proyek ini telah memenuhi seluruh kriteria penugasan berikut:
 - **CSS3:** Styling dasar (tanpa framework) agar tampilan bersih dan responsif.
 - **Vanilla JavaScript:** Logika utama aplikasi.
 - **OpenWeatherMap API:** Sumber data cuaca.
-
 ## 🛠️ Cara Menjalankan Proyek (Setup)
 
 1. Clone repositori ini ke komputer lokal kamu:
