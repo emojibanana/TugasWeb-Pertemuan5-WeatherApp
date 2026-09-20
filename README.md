@@ -2,15 +2,19 @@
 
 Aplikasi cuaca berbasis web sederhana yang dibangun menggunakan Vanilla JavaScript (ES6+). Proyek ini dibuat untuk keperluan tugas perkuliahan sekaligus sebagai media pembelajaran fundamental JavaScript, khususnya dalam mengelola *Asynchronous Programming* (Fetch API) dan *Error Handling*.
 
-## ✨ Fitur Utama
+## 📝 Syarat & Kriteria Tugas yang Diselesaikan
 
-- **Pencarian Real-Time:** Menampilkan data cuaca terkini berdasarkan nama kota yang diinputkan pengguna.
-- **Error Handling Responsif:** Memberikan umpan balik (pesan error) yang jelas kepada pengguna jika kota tidak ditemukan (404) atau terjadi gangguan jaringan.
-- **Clean Code (ES6+):** Menggunakan fitur JavaScript modern seperti:
-  - `Async/Await` untuk proses *fetch* data yang lebih mudah dibaca.
-  - *Arrow Functions*.
-  - *Object Destructuring* untuk ekstraksi data JSON.
-  - *Template Literals* untuk manipulasi DOM.
+Proyek ini telah memenuhi seluruh kriteria penugasan berikut:
+
+- [x] **Gunakan ES6+ (const, arrow functions, template literals)**.
+- [x] **async/await + Fetch API:**.
+- [x] **Tampilkan: kota, suhu, deskripsi, ikon, kelembaban**.
+- [x] **Error handling: kota tidak ditemukan (404)**.
+- [x] **Loading state saat fetch data**.
+- [x] **Minimal 1 array method (map/filter/reduce) (Menggunakan .map())**.
+- [x] **UI responsif (mobile-friendly)**.
+
+---
 
 ## 🚀 Teknologi yang Digunakan
 
