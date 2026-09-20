@@ -31,16 +31,19 @@ const fetchWeather = async (city) => {
 
         //5. Destructuring Object (fitur ES6) untuk mengambil properti yang dibutuhkan
         const { name } = data;
-        const { temp } = data.main;
-        const { description, icon } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { icon } = data.weather[0];
+
+        const weatherDesc = data.weather.map(item => item.description).join(', ');
 
         //6. Sembunyikan loading dan render hasil menggunakan template Literal (fitur ES6)
         loading.classList.add('hidden');
         weatherResult.innerHTML = `
         <h2>Cuaca di ${name}</h2>
-        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${weatherDesc}">
         <p class="temperature">${Math.round(temp)}°C</p>
         <p class="description">${description}</p>
+        <p>Kelembapan: ${humidity}</p>
         `;
     } catch (error) {
         //Error handling level 2 = nangkep error dari block try
