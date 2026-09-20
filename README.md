@@ -1,5 +1,7 @@
 # Weather App Tugas 5 🌦️
 
+[![BETA](https://img.shields.io/badge/status-BETA-yellow)](https://github.com/emojibanana/TugasWeb-Pertemuan5-WeatherApp)
+
 Aplikasi cuaca berbasis web sederhana yang dibangun menggunakan Vanilla JavaScript (ES6+). Proyek ini dibuat untuk keperluan tugas perkuliahan sekaligus sebagai media pembelajaran fundamental JavaScript, khususnya dalam mengelola *Asynchronous Programming* (Fetch API) dan *Error Handling*.
 
 ## 📝 Syarat & Kriteria Tugas yang Diselesaikan
