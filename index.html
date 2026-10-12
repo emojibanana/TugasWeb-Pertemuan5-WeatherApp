@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplikasi Cuaca</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --accent: #2563eb;
+            --accent2: #7c3aed;
+            --accent-soft: #2563eb26;
+            --accent-glow: #2563eb66;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.4s ease; }
+        #pageBody { transition: background 0.8s ease; }
+        /* Aksen dinamis: tombol, garis bawah judul, glow, focus input, spinner */
+        #searchBtn {
+            background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+            box-shadow: 0 4px 14px var(--accent-soft), 0 0 18px var(--accent-glow) !important;
+            transition: background 0.6s ease, box-shadow 0.6s ease, transform 0.15s, filter 0.2s;
+        }
+        #accentBar {
+            background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+            box-shadow: 0 0 12px var(--accent-glow) !important;
+            transition: background 0.6s ease, box-shadow 0.6s ease;
+        }
+        #cityInput:focus {
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 0 4px var(--accent-soft) !important;
+            background: #fff !important;
+        }
+        #loading .spinner { border-top-color: var(--accent) !important; transition: border-color 0.6s ease; }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Aplikasi Cuaca</h1>
-        <div class="search-box">
-            <input type="text" id="cityInput" placeholder="Masukkan nama kota">
-            <button id="searchBtn">Cari</button>
+<body id="pageBody" class="min-h-screen flex items-center justify-center p-5 bg-gradient-to-br from-sky-400 via-blue-600 to-violet-600 bg-fixed">
+    <div class="w-full max-w-md bg-white/95 backdrop-blur rounded-2xl shadow-xl border border-white/50 px-8 py-10 text-center">
+        <h1 class="text-2xl font-bold text-slate-800 tracking-tight">Aplikasi Cuaca</h1>
+        <div id="accentBar" class="w-12 h-1 bg-gradient-to-r from-blue-600 to-violet-600 rounded mx-auto mt-2.5"></div>
+        <div class="flex flex-col sm:flex-row gap-2.5 mt-6 mb-2.5">
+            <input type="text" id="cityInput" placeholder="Masukkan nama kota" autocomplete="off" class="flex-1 min-w-0 px-4 py-3 rounded-xl border-2 border-slate-200 bg-slate-50 text-base outline-none placeholder:text-slate-400 focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-600/15 transition">
+            <button id="searchBtn" class="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-br from-blue-600 to-violet-600 shadow-md shadow-blue-600/30 hover:brightness-110 hover:shadow-lg hover:-translate-y-px active:translate-y-0 active:scale-[0.98] transition whitespace-nowrap w-full sm:w-auto">Cari</button>
         </div>
 
-        <div id="loading" class="hidden">sedang cari....</div>
-        <div id="weatherResult"></div>
-        <div id="errorMessage" class="error hidden"></div> 
+        <div id="loading" class="hidden mt-5 text-slate-500 text-sm">
+            <span class="spinner inline-block w-5 h-5 mr-2 align-middle rounded-full border-[3px] border-slate-200 border-t-blue-600 animate-spin"></span><span>Mencari data cuaca...</span>
+        </div>
+        <div id="weatherResult" class="mt-2.5"></div>
+        <div id="errorMessage" class="hidden mt-4 text-sm text-red-700 bg-red-50 border border-red-200 px-3.5 py-3 rounded-xl"></div>
     </div>
 
     <script src="script.js"></script>
